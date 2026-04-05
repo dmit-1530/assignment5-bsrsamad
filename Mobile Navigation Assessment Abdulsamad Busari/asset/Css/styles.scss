@@ -1,0 +1,185 @@
+$BackgroundColor: #8e4a9e;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  background: $BackgroundColor;
+  padding: 15px 30px;
+  position: relative; /* IMPORTANT */
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+}
+
+.logo span {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.logo img {
+  height: 40px;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 300;
+}
+.cart-icon {
+  height: 22px;
+  cursor: pointer;
+}
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links .active {
+  background: rgba(255,255,255,0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* ICONS */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  display: none;
+  flex-direction: column;
+  text-align: center;
+
+  background: #8e4a9e;
+  z-index: 9;
+}
+
+.mobile-menu a {
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  color: white; 
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: 50px;
+
+  background: linear-gradient(90deg, #46A098,#54A654);
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background: $BackgroundColor;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .logo {
+    text-align: center;
+    flex: 1;
+  }
+
+  .hero {
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
